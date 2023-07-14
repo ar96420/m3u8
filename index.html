@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>M3U8 Player</title>
+</head>
+<body>
+  <h1>M3U8 Player</h1>
+  <label for="m3u8Input">Enter M3U8 Link:</label>
+  <input type="text" id="m3u8Input" placeholder="Paste M3U8 link here">
+  <button onclick="playVideo()">Play</button>
+
+  <video id="videoPlayer" controls></video>
+
+  <script>
+    function playVideo() {
+      var m3u8Link = document.getElementById("m3u8Input").value;
+      var videoPlayer = document.getElementById("videoPlayer");
+      videoPlayer.src = m3u8Link;
+      videoPlayer.load();
+      videoPlayer.play();
+    }
+  </script>
+</body>
+</html>
